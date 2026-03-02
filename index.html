@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>童言绘本工坊</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>童言绘本工坊（4-6岁）</h1>
+      <p>一句话生成故事 · 采集声音创作 · 语音转文本 · 自动插图</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>① 一句话生成绘本</h2>
+        <label for="storyPrompt">输入一句话（例如：小兔子和月亮做朋友）</label>
+        <textarea id="storyPrompt" rows="3" placeholder="请输入一句话...\n"></textarea>
+        <button id="generateStoryBtn">生成绘本</button>
+        <div id="storyOutput" class="output"></div>
+      </section>
+
+      <section class="card">
+        <h2>② 收集用户声音 + 语音转文本 + 声音插图</h2>
+        <p class="hint">点击“开始录音”后，读出你想讲的故事，结束后可自动转文字并生成一张“声音情绪图”。</p>
+        <div class="actions">
+          <button id="startRecordBtn">开始录音</button>
+          <button id="stopRecordBtn" disabled>停止录音</button>
+          <button id="transcribeBtn" disabled>语音转文本</button>
+          <button id="audioArtBtn" disabled>根据声音生成插图</button>
+        </div>
+        <audio id="playback" controls></audio>
+        <label for="transcript">语音转文本结果</label>
+        <textarea id="transcript" rows="4" placeholder="转写结果会显示在这里..."></textarea>
+        <canvas id="audioCanvas" width="720" height="320"></canvas>
+      </section>
+
+      <section class="card">
+        <h2>③ 根据绘本内容自动生成插图</h2>
+        <button id="bookArtBtn" disabled>为当前绘本生成插图</button>
+        <canvas id="bookCanvas" width="720" height="320"></canvas>
+      </section>
+    </main>
+
+    <footer>
+      <p>提示：当前为可运行的前端原型。接入真实 AI 模型后可替换为服务端生成。</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
