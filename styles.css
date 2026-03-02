@@ -1,0 +1,103 @@
+:root {
+  --bg: #f7f5ff;
+  --card: #ffffff;
+  --primary: #6750a4;
+  --accent: #ff9800;
+  --text: #2d2a32;
+  --muted: #6b6780;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: linear-gradient(180deg, #fdf9ff 0%, var(--bg) 100%);
+  color: var(--text);
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.2rem;
+}
+
+h1 { margin-bottom: 0.25rem; }
+
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 8px 24px rgba(103, 80, 164, 0.12);
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid #ddd6f8;
+  border-radius: 10px;
+  padding: 0.7rem;
+  resize: vertical;
+}
+
+button {
+  margin: 0.6rem 0.4rem 0.6rem 0;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+button[disabled] {
+  background: #b7afce;
+  cursor: not-allowed;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.hint {
+  color: var(--muted);
+  margin-top: -0.2rem;
+}
+
+.output {
+  margin-top: 0.6rem;
+  background: #f7f2ff;
+  border-radius: 10px;
+  padding: 0.8rem;
+  line-height: 1.6;
+  min-height: 80px;
+  white-space: pre-wrap;
+}
+
+canvas {
+  width: 100%;
+  margin-top: 0.8rem;
+  border-radius: 12px;
+  border: 1px dashed #c9bee9;
+  background: #fffdf7;
+}
+
+footer {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
